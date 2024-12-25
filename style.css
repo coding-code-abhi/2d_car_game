@@ -1,0 +1,154 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    overflow: hidden;
+}
+.container{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    background-color: rgb(138, 244, 198);
+}
+.road{
+    position: relative;
+    height: 90vh;
+    width: 20%;
+    border-right: 5px solid white;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.car{
+    position: absolute;
+    width: 3rem;
+}
+.car1{
+    top: -30vh;
+}
+.car2{
+    top: -40vh;
+}
+.car3{
+    top: -50vh;
+}
+.userCar{
+    position: absolute;
+    background-color: rgb(122, 165, 42);
+    height: 4rem;
+    width: 2rem;
+    top: 60vh;
+    left:48.55%;
+    transition: left 1s linear;
+    background-image: url('user.jpg');
+    background-size: cover;
+    mix-blend-mode: multiply;
+    z-index: 99999;
+}
+@keyframes drive1{
+    from {
+        transform: translateY(0); /* Starting position */
+    }
+    to {
+        transform: translateY(130vh); /* Moves up by 100px */
+    }
+}
+@keyframes drive2{
+    from {
+        transform: translateY(0); /* Starting position */
+    }
+    to {
+        transform: translateY(140vh); /* Moves up by 100px */
+    }
+}
+@keyframes drive3{
+    from {
+        transform: translateY(0); /* Starting position */
+    }
+    to {
+        transform: translateY(150vh); /* Moves up by 100px */
+    }
+}
+@keyframes user{
+    from {
+        transform: translateY(50vh); /* Starting position */
+    }
+    to {
+        transform: translateY(10vh); /* Moves up by 100px */
+    }
+}
+.nav{
+    height: 10vh;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.nav p{
+    text-align: center;
+    display: flex;
+    margin-right: 2em;
+}
+.nav button{
+    border: none;
+    height: 2.5rem;
+    width: 8rem;
+    background-color: rgb(38, 146, 2);
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+.nav button:hover{
+    color: aliceblue;
+    background-color: rgb(0, 54, 0);
+}
+.nav #stopBtn{
+    background-color: rgb(255, 0, 0);
+}
+.nav #stopBtn:hover{
+    color: aliceblue;
+    background-color: rgb(103, 4, 4);
+}
+#restartBtn{
+    display: none;
+}
+#stopBtn{
+    display: none;
+}
+
+.car{
+    background-image: url('OIP.jpg');
+    background-size: cover;
+    mix-blend-mode: multiply;
+    z-index: 1;
+}
+.white{
+    height: 3rem;
+    width: 1rem;
+    background-color: #c8bfbf;
+    margin-top: 1rem;
+    z-index: 1;
+}
+@keyframes white{
+    from {
+        transform: translateY(0); /* Starting position */
+    }
+    to {
+        transform: translateY(-100vh); /* Moves up by 100px */
+    }
+}
